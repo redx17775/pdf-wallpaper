@@ -1,0 +1,47 @@
+body {
+  background-color: #212121;
+  color: #eeeeee;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+form {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+form input {
+  font-size: 2rem;
+  font: "roboto-regular";
+}
+form .btn {
+  background-color: #424242;
+  border: none;
+  padding: 1rem;
+  border-radius: 3rem;
+  color: #eeeeee;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  background-color: #424242;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  color: #eeeeee;
+  width: fit-content;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
