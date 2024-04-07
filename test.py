@@ -1,13 +1,21 @@
-import fitz  # PyMuPDF
 
-input_pdf_path = "Hw1_133747.pdf"
-output_pdf_path = "output.pdf"
-background_color = (18/255, 18/255, 18/255)
+import fitz
 
-doc = fitz.open(input_pdf_path)
+skips = (b"k", b"K", b"rg", b"RG", b"sc", b"SC", b"scn", b"SCN", b"gs", b"cs")
+doc = fitz.open("processed_pdf-9.pdf")
 for page in doc:
-    page.draw_rect(page.rect, color=None, fill=background_color, overlay=False)
-
-doc.ez_save(output_pdf_path)
-doc.close()
-print("Background color changed and saved to", output_pdf_path)
+    page.clean_contents()
+    xref = page.get_contents()[0]
+    lines = page.read_contents().splitlines()
+    for i in range(len(lines)):
+        if lines[i].endswith(skips):
+            lines[i] = b""
+            continue
+        if lines[i] == b"q":
+            lines[i] = b"q 0.19 g 0 G"
+        elif lines[i] == b"BT":
+            lines[i] = b"BT 0.6509803921568628 0.5294117647058824 0.9803921568627451 rg 0 G"
+        elif lines[i] == b"ET":
+            lines[i] = b"ET 0.19 g 0 G"
+    doc.update_stream(xref, b"\n".join(lines))
+doc.ez_save("x.pdf", pretty=True)
