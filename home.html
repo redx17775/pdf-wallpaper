@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkPDF</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="icon" href="imgs/logoSM.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><p>RezePDF</p></div>
+      <ul class="nav_list">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h1>Rzez PDF</h1>
+      <p>turn your white bdf into dark one</p>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="center">
+          <label for="pdf_file" class="custom-file-upload">+</label>
+        </div>
+        <input
+          type="file"
+          name="pdf_file"
+          id="pdf_file"
+          accept=".pdf"
+          required
+        />
+        <input type="submit" value="Submit " class="btn" />
+      </form>
+    </div>
+  </body>
+</html>

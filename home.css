@@ -1,0 +1,111 @@
+body {
+  background-color: #393053;
+  padding: 0;
+  margin: 0;
+}
+
+/*####################################       Nav       ####################################*/
+nav {
+  background-color: #18122b;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*========= logo =========*/
+nav .logo {
+  font-size: 3rem;
+  color: #393053;
+  margin-left: 1rem;
+  font-family: "Jacquard 24", system-ui;
+  justify-self: start;
+  flex-grow: 3;
+}
+nav .logo p {
+  margin: 0.2rem;
+}
+
+/*========= list =========*/
+nav .nav_list {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+  justify-self: flex-end;
+  margin-right: 3rem;
+}
+nav .nav_list li {
+  font-family: "Platypi", serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #393053;
+}
+/*####################################       Hero       ####################################*/
+/*========= wallpaper =========*/
+.hero {
+  background-image: linear-gradient(
+      90deg,
+      black 0%,
+      rgba(255, 255, 255, 0) 150%
+    ),
+    url(imgs/hero.png);
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+}
+/*========= text =========*/
+.hero h1 {
+  margin: 0;
+  color: #d4adfc;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+}
+.hero p {
+  margin-top: 0;
+  color: #d4adfc;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  font-family: "Oswald", sans-serif;
+}
+/*========= form =========*/
+.hero form {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero form #pdf_file {
+  display: none;
+}
+.hero form .custom-file-upload {
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  background-color: #18122b;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #eeeeee;
+  width: 10rem;
+  height: min-content;
+  color: #d4adfc;
+  font-size: 1=rem;
+  font-family: "Oswald", sans-serif;
+}
+.hero form .btn {
+  cursor: pointer;
+  text-align: center;
+  background-color: #18122b;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  color: #eeeeee;
+  width: 10rem;
+  height: min-content;
+  color: #d4adfc;
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+  padding-top: 1rem;
+}
